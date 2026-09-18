@@ -30,6 +30,7 @@ public class DataInit {
             self.makeBaseMembers();
             self.makeBasePosts();
             self.makeBasePostComments();
+
         };
     }
 
