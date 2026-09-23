@@ -44,6 +44,7 @@ public class PayoutCollectItemsAndCompletePayoutsBatchJobConfig {
                 return RepeatStatus.FINISHED;
               }
 
+              // 처리한 아이템 개수를 WRITE_COUNT에 더함
               contribution.incrementWriteCount(processedCount);
 
               return RepeatStatus.CONTINUABLE;
@@ -60,6 +61,7 @@ public class PayoutCollectItemsAndCompletePayoutsBatchJobConfig {
                 return RepeatStatus.FINISHED;
               }
 
+              // 처리한 정산서 개수를 WRITE_COUNT에 더함
               contribution.incrementWriteCount(processedCount);
 
               return RepeatStatus.CONTINUABLE;
